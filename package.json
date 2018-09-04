@@ -1,0 +1,12 @@
+{
+  "name": "blijblijblij_com",
+  "private": true,
+  "dependencies": {
+    "stimulus": "^1.1.0"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:blijblijblij/blijblijblij.com.git",
+  "author": "Rogier Wessel <rhwessel@xs4all.nl>",
+  "license": "MIT"
+}
