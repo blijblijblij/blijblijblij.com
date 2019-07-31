@@ -12,6 +12,8 @@ require 'action_controller/railtie'
 require 'action_mailer/railtie'
 require 'action_view/railtie'
 require 'action_cable/engine'
+require 'socket'
+require 'ipaddr'
 # require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
@@ -29,7 +31,24 @@ module BlijblijblijCom
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    # Don't generate system test files.
-    config.generators.system_tests = nil
+    config.generators do |g|
+      # Don't generate assets for Sprockets
+      g.assets = nil
+      # Don't generate tests and helpers (for this tutorial)
+      g.test_framework = nil
+      g.helper = nil
+    end
+    if ENV['DOCKERIZED'] == 'true'
+      Socket.ip_address_list.each do |addrinfo|
+        next unless addrinfo.ipv4?
+        next if addrinfo.ip_address == "127.0.0.1" # Already whitelisted
+
+        ip = IPAddr.new(addrinfo.ip_address).mask(24)
+
+        Logger.new(STDOUT).info "Adding #{ip.inspect} to config.web_console.whitelisted_ips"
+
+        config.web_console.whitelisted_ips << ip
+      end
+    end
   end
 end

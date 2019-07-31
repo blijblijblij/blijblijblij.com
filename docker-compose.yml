@@ -37,6 +37,7 @@ services:
       - HISTFILE=/app/log/.bash_history
       - PSQL_HISTFILE=/app/log/.psql_history
       - EDITOR=vi
+      - DOCKERIZED=true
     depends_on:
       - postgres
       - redis
