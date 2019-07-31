@@ -56,6 +56,10 @@ services:
     ports:
       - '3000:3000'
 
+  rspec:
+    <<: *backend
+    command: bundle exec rspec
+
   sidekiq:
     <<: *backend
     command: bundle exec sidekiq -C config/sidekiq.yml
