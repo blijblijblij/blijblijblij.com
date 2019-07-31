@@ -41,7 +41,7 @@ module BlijblijblijCom
     if ENV['DOCKERIZED'] == 'true'
       Socket.ip_address_list.each do |addrinfo|
         next unless addrinfo.ipv4?
-        next if addrinfo.ip_address == "127.0.0.1" # Already whitelisted
+        next if addrinfo.ip_address == '127.0.0.1' # Already whitelisted
 
         ip = IPAddr.new(addrinfo.ip_address).mask(24)
 
