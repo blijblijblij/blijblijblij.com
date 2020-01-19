@@ -5,6 +5,8 @@ author: "Rogier Wessel"
 tags: ["blog", "hugo"]
 draft: false
 ---
+> 2020-01-19: no content storm here, so merged blog.blijblijblij.com and blijblijblij.com
+
 Somehow over time bitrot appeared in my [Hugo](https://gohugo.io/) setup. Files where ok 
 for a very old version, but config changes no longer followed the newer 
 conventions as suggested by Hugo. Also my carefully adapted
