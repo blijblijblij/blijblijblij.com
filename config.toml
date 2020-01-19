@@ -32,7 +32,7 @@ canonifyurls = true
 
 [author]
   name = "Rogier Wessel"
-  bio = "Happy nerd, ever searching, researching & learning new things ..."
+  bio = "Happy nerd, ever searching & learning new things ..."
   job = "Software plumber / engineer"
   location = "The Netherlands, Zutphen"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
@@ -82,6 +82,20 @@ canonifyurls = true
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
   url = "https://github.com/blijblijblij"
 
+[[menu.links]]
+  weight = 1
+  identifier = "instagram"
+  name = "Instagram"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-instagram\"></i>"
+  url = "https://www.instagram.com/blijblijblij/"
+
+[[menu.links]]
+  weight = 1
+  identifier = "twitter"
+  name = "Twitter"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-twitter\"></i>"
+  url = "https://www.twitter.com/blijblijblij/"
+
 [[menu.misc]]
   weight = 1
   identifier = "rss"
@@ -110,7 +124,7 @@ canonifyurls = true
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Hugo tranquilpeak theme demo"
+  description = "Personal website by Rogier Wessel"
 
   # Customization
   # Define the behavior of the sidebar
@@ -178,10 +192,10 @@ canonifyurls = true
   # Comment and uncomment to enable or disable sharing options
   # If you wanna add a sharing option, read user documentation :
   # Tranquilpeak configuration > Theme configuration > sharing-options
-  [[params.sharingOptions]]
-    name = "Facebook"
-    icon = "fa-facebook-official"
-    url = "https://www.facebook.com/sharer/sharer.php?u=%s"
+  # [[params.sharingOptions]]
+  #   name = "Facebook"
+  #   icon = "fa-facebook-official"
+  #   url = "https://www.facebook.com/sharer/sharer.php?u=%s"
 
   [[params.sharingOptions]]
     name = "Twitter"
