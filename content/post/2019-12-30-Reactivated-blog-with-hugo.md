@@ -5,13 +5,11 @@ author: "Rogier Wessel"
 tags: ["blog", "hugo"]
 draft: false
 ---
-> 2020-01-19: no content storm here, so merged blog.blijblijblij.com and blijblijblij.com
-
 Somehow over time bitrot appeared in my [Hugo](https://gohugo.io/) setup. Files where ok 
 for a very old version, but config changes no longer followed the newer 
 conventions as suggested by Hugo. Also my carefully adapted
-theme had fallen to pieces and didn't render no more, so 
-[kiss theme](https://themes.gohugo.io/kiss/) to the rescue!
+theme had fallen to pieces and didn't render no more, so [Tranquilpeak theme](https://github.com/kakawait/hugo-tranquilpeak-theme/) 
+to the rescue!
 
 Also automation happened and we now have [Github Actions](https://github.com/features/actions) which is a 
 perfect solution to build and deploy Hugo pages to [GitHub Pages](https://pages.github.com/). 
@@ -19,7 +17,7 @@ perfect solution to build and deploy Hugo pages to [GitHub Pages](https://pages.
 Github-pages is an excellent service
 supporting the hosting of static websites, ssl included, also 
 [custom domain names are supported](https://help.github.com/en/github/working-with-github-pages/about-custom-domains-and-github-pages) allowing me to host via Github
-Pages but on my own domain [https://blog.blijblijblij.com](https://blog.blijblijblij.com).
+Pages but on my own domain [https://blijblijblij.com](https://blijblijblij.com).
 
 ![Git settings](/images/2019-12-30-git-settings.png "Git settings")
 
