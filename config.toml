@@ -1,0 +1,36 @@
+baseURL = "https://blijblijblij.com/"
+languageCode = "en-us"
+title = "blijblijblij.com"
+theme = "kiss"
+copyright = "Copyright <a href=\"https://github.com/blijblijblij\">Rogier Wessel</a> 2020"
+# disqusShortname = "blijblijblij"
+Paginate = 5 # Number of posts per page
+enableRobotsTXT = true
+
+[params.social]
+	twitter = "blijblijblij"
+	github = "blijblijblij"
+  linkedin = "blijblijblij"
+  email = "rogier@blijblijblij.com"
+  instagram = "blijblijblij"
+  codepen = ""
+  rss = "posts/index.xml" # Add this to show RSS button in social.
+
+[params.info]
+  adsense = "" # Adsense ID (ID only, without ca-pub-)
+  enableSocial = true # Adds OpenGraph and Twitter cards
+  homeTitle = "blijblijblij.com" # Title for home page
+  poweredby = false # Adds powered by hugo and kiss below Copyright
+  related = true # Includes related articles at the bottom of the article
+  codeCopy = false # Add copy button above code blocks
+
+[params.rss] # Adding this tag enables RSS feed
+  includeContent = true # Includes whole content in rss
+  authorName = "Rogier Wessel" # Author full name
+  authorEmail = "rogier@blijblijblij.com" # Author email
+
+[params.social.config]
+  platforms = ["github","twitter","instagram","email","linkedin", "rss"]
+
+[taxonomies]
+  tag ="tags"
