@@ -7,5 +7,5 @@ draft: true
 ---
 Some say I have an unhealthy fetish for Command Line applications,
 I disagree
-bloeb
+
 
