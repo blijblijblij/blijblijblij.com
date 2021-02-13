@@ -27,7 +27,7 @@ jobs:
 
   build_and_deploy:
     # run only on master branch
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/task/Fuck-hugo-move-to-jekyll'
     name: Deploy
     runs-on: ${{ matrix.os }}
     steps:
