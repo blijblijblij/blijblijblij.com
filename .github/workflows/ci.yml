@@ -1,16 +1,20 @@
 name: Test and Deploy
 
 on: [push]
-
-jobs: 
+jobs:
   test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        ruby: [2.6, 2.7, '3.0']
     name: Test
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Set up Ruby
-        uses: actions/setup-ruby@v1
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6.6
 
@@ -18,22 +22,18 @@ jobs:
         run: |
           gem install bundler
           bundle install
-      # - name: Run Rubocop
-      #   run: rubocop
 
       - name: Build to _site
         run: |
           jekyll build -d _site
-      - name: Run Rspec
-        run: rspec -fd spec
 
   build_and_deploy:
     # run only on master branch
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     name: Deploy
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Build & Deploy to GitHub Pages
         env: 
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
