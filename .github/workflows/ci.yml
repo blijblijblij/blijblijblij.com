@@ -34,4 +34,4 @@ jobs:
           jekyll_baseurl: ''         # Default is according to _config.yml
           bundler_ver: '>=0'         # Default is latest bundler version
           cname: 'blijblijblij.com'  # Default is to not use a cname
-          actor: 'blijblijblij'      # Default is the GITHUB_ACTOR
+          actor: ''                  # Default is the GITHUB_ACTOR
