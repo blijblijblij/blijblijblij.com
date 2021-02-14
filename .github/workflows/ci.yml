@@ -29,7 +29,7 @@ jobs:
     # run only on master branch
     if: github.event_name == 'push' && github.ref == 'refs/heads/task/Fuck-hugo-move-to-jekyll'
     name: Deploy
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
