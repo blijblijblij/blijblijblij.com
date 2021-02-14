@@ -23,4 +23,4 @@ jobs:
       # Invoke this action against the newly checked out source code.
       - uses: EdricChan03/action-build-deploy-ghpages@v2.5.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
