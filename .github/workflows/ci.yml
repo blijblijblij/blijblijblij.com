@@ -1,26 +1,35 @@
-# In your repository's `.github/workflows/publish-to-github-pages.yaml` file.
----
-# Name of your GitHub Actions workflow.
-name: Publish to GitHub Pages
+name: Build and Deploy to Github Pages
 
-# Specifies to run this workflow whenever a push is made (commits are
-# added) to the branch named `jekyll`.
 on:
   push:
     branches:
-      # Change this to the branch where you keep your Jekyll code.
-      - task/Fuck-hugo-move-to-jekyll
+      -  task/Fuck-hugo-move-to-jekyll 
+      # master  # Here source code branch is `master`, it could be other branch
 
-# Define a job named `build-and-publish` in your workflow.
 jobs:
-  build-and-publish:
-    runs-on: ubuntu-latest # This job uses a GitHub-hosted runner.
-
+  build_and_deploy:
+    runs-on: ubuntu-latest
     steps:
-      # Checkout the source from the `jekyll` branch.
       - uses: actions/checkout@v2
 
-      # Invoke this action against the newly checked out source code.
-      - uses: EdricChan03/action-build-deploy-ghpages@v2.5.0
+      # Use GitHub Actions' cache to cache dependencies on servers
+      - uses: actions/cache@v2
         with:
-          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      # Use GitHub Deploy Action to build and deploy to Github
+      - uses: jeffreytse/jekyll-deploy-action@v0.2.0
+        with:
+          provider: 'github'
+          token: ${{ secrets.ACTIONS_DEPLOY_KEY }} # It's your Personal Access Token(PAT)
+          repository: ''             # Default is current repository
+          branch: 'gh-pages'         # Default is gh-pages for github provider
+          jekyll_src: './'           # Default is root directory
+          jekyll_cfg: '_config.yml'  # Default is _config.yml
+          jekyll_baseurl: ''         # Default is according to _config.yml
+          bundler_ver: '>=0'         # Default is latest bundler version
+          cname: 'blijblijblij.com'  # Default is to not use a cname
+          actor: ''                  # Default is the GITHUB_ACTOR
