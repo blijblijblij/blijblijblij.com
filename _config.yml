@@ -2,21 +2,20 @@
 
 title: blijblijblij.com
 url: "https://blijblijblij.com"
+description: "Recent content on blijblijblij.com"
 baseurl: ""
 email: blijblijblij@hey.com
 twitter: https://www.twitter.com/blijblijblij
 github: https://github.com/blijblijblij
 instagram: https://www.instagram.com/blijblijblij/
 
+feed:
+  path: index.xml
+  posts_limit: 10
+
 highlighter: rouge
 markdown: kramdown
 paginate: 8
-
-# Tracker
-# analytics: UA-83979019-4
-
-# Comments
-# disqus-shortname: webjeda-demo
 
 #optimization
 #compress.html
@@ -44,3 +43,4 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-feed

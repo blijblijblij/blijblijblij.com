@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Reactivated Blog With Hugo"
+date: 2019-12-30T20:08:15+01:00
+author: "Rogier Wessel"
 ---
 Somehow over time bitrot appeared in my [Hugo](https://gohugo.io/) setup. Files where ok 
 for a very old version, but config changes no longer followed the newer 
@@ -54,3 +56,4 @@ jobs:
 
 But more information can be found on this [peaceiris/actions-hugo
 ](https://github.com/peaceiris/actions-hugo) page.
+
