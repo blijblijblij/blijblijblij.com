@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link rel="stylesheet" href="/assets/css/main.css">
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Setup an easy reverse proxy to the biserver | blijblijblij.com</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Setup an easy reverse proxy to the biserver" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Problem" />
+<meta property="og:description" content="Problem" />
+<link rel="canonical" href="https://blijblijblij.com/2016/12/10/easy-proxy-for-biserver.html" />
+<meta property="og:url" content="https://blijblijblij.com/2016/12/10/easy-proxy-for-biserver.html" />
+<meta property="og:site_name" content="blijblijblij.com" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-12-10T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Setup an easy reverse proxy to the biserver" />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Setup an easy reverse proxy to the biserver","dateModified":"2016-12-10T00:00:00+01:00","datePublished":"2016-12-10T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blijblijblij.com/2016/12/10/easy-proxy-for-biserver.html"},"description":"Problem","url":"https://blijblijblij.com/2016/12/10/easy-proxy-for-biserver.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+
+    <body style="background-color: rgb(255, 255, 255)">
+        <script async src="/assets/js/theme.min.js"></script>
+        <header>
+            <a href="/">
+                <div class="home"></div>
+            </a>
+        </header>
+
+        <main>
+            <article>
+                <h1 class="post-headline">Setup an easy reverse proxy to the biserver</h1>
+<p class="meta"><small>December 10, 2016</small></p>
+
+<h1 id="problem">Problem</h1>
+
+<p>You have a biserver serving up information either directly or embedded into
+some website. You need to open up the biserver to the rest of the world but want
+to prevent access to certain endpoints. These endpoints might serve only internal
+consumers, or have security implications.</p>
+
+<p>We need to limit the attack service of a biserver!</p>
+
+<p><img src="/assets/images/mayday.png" alt="proxy it" title="proxy it" /></p>
+
+<p>Traditionally one would spin up a new server, add an apache config to proxy forward
+some requests to the backend. This adds complexity, moving parts, and lowers
+agility.</p>
+
+<p>In this post I’ll suggest a simplification of the same approach, just in a
+slightly more flexible way, obviously we’ll containerize it.</p>
+
+<h1 id="solution">Solution</h1>
+
+<h2 id="ingredients">Ingredients</h2>
+
+<ul>
+  <li>a <a href="https://github.com/docker/dockercloud-haproxy">haproxy container</a> with a pretty impressive featureset</li>
+  <li>a biserver 6.1 container with a wildly impressive <code class="language-plaintext highlighter-rouge">HelloWorld</code> cde dashboard <code class="language-plaintext highlighter-rouge">/pentaho/api/repos/%3Apublic%3AHelloWorld.wcdf/generatedContent</code></li>
+  <li>a canary container that will informs us about missing resources</li>
+  <li>a docker-composition to glue these together:</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: <span class="s1">'2'</span>
+services:
+  biserver:
+    image: pentaho/biserver:6.1
+    ports:
+      - 8080:8080
+    environment:
+      - <span class="nv">VIRTUAL_HOST</span><span class="o">=</span>...
+      - <span class="nv">VIRTUAL_HOST_WEIGHT</span><span class="o">=</span>2
+  canary:
+    image: httpd:latest
+    environment:
+      - <span class="nv">VIRTUAL_HOST</span><span class="o">=</span>http://<span class="k">*</span>
+      - <span class="nv">VIRTUAL_HOST_WEIGHT</span><span class="o">=</span>1
+  proxy:
+    image: dockercloud/haproxy
+    links:
+      - biserver
+      - canary
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
+</code></pre></div></div>
+
+<h2 id="round-1">Round 1</h2>
+
+<p>We utilise the <code class="language-plaintext highlighter-rouge">VIRTUAL_HOST</code> <a href="https://github.com/docker/dockercloud-haproxy#global-and-default-settings-of-haproxy">options</a> of the proxy to whitelist our epic HelloWorld dashboard. By giving the proxy a higher <code class="language-plaintext highlighter-rouge">VIRTUAL_HOST_WEIGHT</code> we force traffic to first route via this <code class="language-plaintext highlighter-rouge">VIRTUAL_HOST</code> everything else falls through onto the canary container.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">VIRTUAL_HOST</span><span class="o">=</span>http://<span class="k">*</span>/pentaho/api/repos/%3Apublic%3AHelloWorld.wcdf/generatedContent
+</code></pre></div></div>
+
+<p>Looking at the dashboard directly.</p>
+
+<p><img src="/assets/images/2016-12-10_biserver direct.png" alt="unproxied" title="unproxied" /></p>
+
+<p>Now, lets view it via the proxy
+<img src="/assets/images/2016-12-10_biserverproxied.png" alt="proxied" title="proxied" /></p>
+
+<p>But oh, the horror of my carefully crafted indenting, it has gone all haywire. And when we inspect the page we see what’s going wrong:</p>
+
+<p><img src="/assets/images/2016-12-10_styling_horrors.png" alt="styling horrors" title="styling horrors" /></p>
+
+<p>And funny enough, now the <code class="language-plaintext highlighter-rouge">canary</code> container comes to offer the same insight as well:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:09:49 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf/js/cdf-bootstrap-script-includes.js?v=decdbcb3b01341682f2ef9799798313c HTTP/1.1"</span> 404 263
+canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:09:49 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf/css/cdf-bootstrap-style-includes.css?v=7bc42bb099ded22348e9c9b992045d67 HTTP/1.1"</span> 404 264
+canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:09:49 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf-dd/js/CDF.js?v=7591bba3804971aeae31ca943022aba2 HTTP/1.1"</span> 404 240
+canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:09:49 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf-dd/css/CDF-CSS.css?v=9dd48fd0265f0d8bcc30ac6afec3f0ff HTTP/1.1"</span> 404 246
+canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:09:52 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf/js/cdf-bootstrap-script-includes.js?v=decdbcb3b01341682f2ef9799798313c HTTP/1.1"</span> 404 263
+canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:09:52 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf/css/cdf-bootstrap-style-includes.css?v=7bc42bb099ded22348e9c9b992045d67 HTTP/1.1"</span> 404 264
+canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:09:52 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf-dd/js/CDF.js?v=7591bba3804971aeae31ca943022aba2 HTTP/1.1"</span> 404 240
+canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:09:52 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf-dd/css/CDF-CSS.css?v=9dd48fd0265f0d8bcc30ac6afec3f0ff HTTP/1.1"</span> 404 246
+canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:11:09 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf/js/cdf-bootstrap-script-includes.js?v=decdbcb3b01341682f2ef9799798313c HTTP/1.1"</span> 404 263
+canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:11:09 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf/css/cdf-bootstrap-style-includes.css?v=7bc42bb099ded22348e9c9b992045d67 HTTP/1.1"</span> 404 264
+canary_1    | 172.18.0.4 - - <span class="o">[</span>10/Dec/2016:20:11:09 +0000] <span class="s2">"GET /pentaho/api/repos/pentaho-cdf-dd/js/CDF.js?v=7591bba3804971aeae31ca943022aba2 HTTP/1.1"</span> 404 240
+</code></pre></div></div>
+<h2 id="round-2">Round 2</h2>
+<p>So we whitelist two more paths:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/pentaho/api/repos/pentaho-cdf/js/*</code></li>
+  <li><code class="language-plaintext highlighter-rouge">/pentaho/api/repos/pentaho-cdf/css/*</code></li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">VIRTUAL_HOST</span><span class="o">=</span>http://<span class="k">*</span>/pentaho/api/repos/%3Apublic%3AHelloWorld.wcdf/generatedContent,http://<span class="k">*</span>/pentaho/api/repos/pentaho-cdf/css/<span class="k">*</span>,http://<span class="k">*</span>/pentaho/api/repos/pentaho-cdf/js/<span class="k">*</span>
+</code></pre></div></div>
+
+<p>Et voila, indenting back from the death, but carefully proxied for only that particular resource we wanted to expose to the world <code class="language-plaintext highlighter-rouge">:-)</code>
+<img src="/assets/images/2016-12-10_epic_dashboard.png" alt="epic" title="epic" /></p>
+
+<p>So the final composition looks like:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: <span class="s1">'2'</span>
+services:
+  biserver:
+    image: pentaho/biserver:6.1
+    ports:
+      - 8080
+    environment:
+      - <span class="nv">VIRTUAL_HOST</span><span class="o">=</span>http://<span class="k">*</span>/pentaho/api/repos/%3Apublic%3AHelloWorld.wcdf/generatedContent,http://<span class="k">*</span>/pentaho/api/repos/pentaho-cdf/css/<span class="k">*</span>,http://<span class="k">*</span>/pentaho/api/repos/pentaho-cdf/js/<span class="k">*</span>
+      - <span class="nv">VIRTUAL_HOST_WEIGHT</span><span class="o">=</span>2
+      - <span class="nv">GZIP_COMPRESSION_TYPE</span><span class="o">=</span>text/html text/plain text/css text/javascript application/json
+  canary:
+    image: httpd:latest
+    environment:
+      - <span class="nv">VIRTUAL_HOST</span><span class="o">=</span>http://<span class="k">*</span>
+      - <span class="nv">VIRTUAL_HOST_WEIGHT</span><span class="o">=</span>1
+      - <span class="nv">GZIP_COMPRESSION_TYPE</span><span class="o">=</span>text/html text/plain text/css text/javascript application/json
+  proxy:
+    image: dockercloud/haproxy
+    links:
+      - biserver
+      - canary
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
+</code></pre></div></div>
+
+<p>We have locked up the biserver completely, and we can dive deeper into the <a href="https://github.com/docker/dockercloud-haproxy#global-and-default-settings-of-haproxy">magic of the haproxy container</a>,
+as it can do easy ssl termination as well, just change the proxy to:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>proxy:
+  image: dockercloud/haproxy
+  environment:
+    - <span class="nv">DEFAULT_SSL_CERT</span><span class="o">=</span><span class="nt">-----</span><span class="o">&gt;</span> my cert goes here
+  links:
+    - biserver
+    - canary
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  ports:
+    - 443:443
+</code></pre></div></div>
+
+
+<!-- Comments only for posts -->
+
+    
+
+
+            </article>
+        </main>
+
+        <footer>
+            <div class="links">
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a class="theme" onclick="theme()">Dark/Light</a>
+            </div>
+            <p class="copy">
+                <small>Copyrights by
+                    blijblijblij.com
+                </small>
+            </p>
+        </footer>
+        <!-- Google Analytics Tracking code -->
+<script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
+<script>
+var galite = galite || {};
+galite.UA = '';
+</script>
+    </body>
+
+</html>

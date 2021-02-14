@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link rel="stylesheet" href="/assets/css/main.css">
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>PentahoNL meetup March 2017 recap | blijblijblij.com</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="PentahoNL meetup March 2017 recap" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Great vibe, interesting talks" />
+<meta property="og:description" content="Great vibe, interesting talks" />
+<link rel="canonical" href="https://blijblijblij.com/2017/03/17/pentahonl-recap.html" />
+<meta property="og:url" content="https://blijblijblij.com/2017/03/17/pentahonl-recap.html" />
+<meta property="og:site_name" content="blijblijblij.com" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-03-17T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="PentahoNL meetup March 2017 recap" />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"PentahoNL meetup March 2017 recap","dateModified":"2017-03-17T00:00:00+01:00","datePublished":"2017-03-17T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blijblijblij.com/2017/03/17/pentahonl-recap.html"},"description":"Great vibe, interesting talks","url":"https://blijblijblij.com/2017/03/17/pentahonl-recap.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+
+    <body style="background-color: rgb(255, 255, 255)">
+        <script async src="/assets/js/theme.min.js"></script>
+        <header>
+            <a href="/">
+                <div class="home"></div>
+            </a>
+        </header>
+
+        <main>
+            <article>
+                <h1 class="post-headline">PentahoNL meetup March 2017 recap</h1>
+<p class="meta"><small>March 17, 2017</small></p>
+
+<h1 id="great-vibe-interesting-talks">Great vibe, interesting talks</h1>
+
+<p>We had another great <a href="https://www.meetup.com/Pentaho-NL-Meetup/events/236959320/">PentahoNL</a> meetup last week.</p>
+
+<p>This session was hosted by <a href="https://twitter.com/maskerade1">Rob Smienk</a> at the offices of  <a href="https://twitter.com/_mrdm_">@<em>MRDM</em></a> in Deventer. <a href="https://twitter.com/_mrdm_">@<em>MRDM</em></a> is a company specialized in aggregating Medical data and registration data to gather better insights in Medical processes and treatment outcomes.</p>
+
+<p>Hospitals and University Medical Centers increasingly need to report and clarify on Costs and Quality of medical treatments. They gather data from connected Hospitals, aggregate and benchmark the results. They are growing fast, moving into other European markets as we speak, and are actively <a href="https://www.mrdm.nl/page/vacatures">seeking new keyboard cowboys</a>.</p>
+
+<h1 id="mrdm-pdi-by-components">MRDM: PDI by components</h1>
+<p><em>Rob Smienk</em></p>
+
+<p>Metadata driven highly componentized etl as developed at MRDM. By building small components and glueing them together with a homemade orchestration framework these guys are able to quickly onboard new datasets by mix and matching suitable components. Highly agile, I was impressed and inspired by their approach.</p>
+
+<iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="700" height="510" src="https://prezi.com/embed/5kov4ml6fyre/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE1iOUU4aWJ6aDNMU2VEWHN4MlNURGwvc3BCa1poUnZWSDJKcWxmNzhxcz0&amp;landing_sign=mNxxS6ytyAfMBJ75uob9akE2xSQpZi0EzJVI0sPYrvY"></iframe>
+
+<h1 id="mrdm-etl-testing">MRDM: ETL testing</h1>
+<p><em>Rutger Deterd Oude Weme</em></p>
+
+<p>The small components suite perfectly for TDD <a href="https://en.wikipedia.org/wiki/Test-driven_development">(Test Driven Development)</a>, it was the first group I have seen following up so strongly on TDD in the Pentaho “ecosphere”, should be applied much more (at least I’ll try to follow up on their guidelines more seriously).</p>
+
+<iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="700" height="510" src="https://prezi.com/embed/wcpw8wjmrfad/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE1iOUU4aWJ6aDNMU2VEWHN4M0R5NE1adDArMHBKZFZ5eUhsWm5GT0RXcz0&amp;landing_sign=kkGb--EbKdlhnoHws1pXgwd6GVWYTg-N5CcVs3aUb4I"></iframe>
+
+<h1 id="continuous-delivery-of-etl-from-git-to-carte-in-a-couple-off-secs">Continuous Delivery of Etl, from git to carte in a (couple off) sec(s)</h1>
+<p><em>Rogier Wessel</em></p>
+
+<p><a href="https://github.com/blijblijblij/presentations/blob/develop/201703%20-%20pentaho%20nl%20meetup/Continuous%20Delivery%20of%20Etl%2C%20from%20git%20to%20carte%20in%20a%20(couple%20off)%20sec(s).pdf">I talked but mostly demo-ed</a> our Continuous Delivery setup. We utilize the power of Docker, Apache Mesos with some help of a CI (Teamcity) to quickly build and deploy new ETL as it gets committed to git(hub).</p>
+
+<h1 id="to-conclude">To conclude</h1>
+<p>I think the combination of talks was very complementary, from different points of the challenge of building solid ETL we showed how to make finely grained, highly testable and quickly releasable code.</p>
+
+<p>Really wonder what will be next time, hope to see you guys soon!</p>
+
+
+<!-- Comments only for posts -->
+
+    
+
+
+            </article>
+        </main>
+
+        <footer>
+            <div class="links">
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a class="theme" onclick="theme()">Dark/Light</a>
+            </div>
+            <p class="copy">
+                <small>Copyrights by
+                    blijblijblij.com
+                </small>
+            </p>
+        </footer>
+        <!-- Google Analytics Tracking code -->
+<script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
+<script>
+var galite = galite || {};
+galite.UA = '';
+</script>
+    </body>
+
+</html>

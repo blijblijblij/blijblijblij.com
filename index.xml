@@ -1,18 +1,543 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>blijblijblij.com</title><link>https://blijblijblij.com/</link><description>Recent content on blijblijblij.com</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 30 Dec 2019 20:08:15 +0100</lastBuildDate><atom:link href="https://blijblijblij.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Reactivated Blog With Hugo</title><link>https://blijblijblij.com/2019/12/reactivated-blog-with-hugo/</link><pubDate>Mon, 30 Dec 2019 20:08:15 +0100</pubDate><guid>https://blijblijblij.com/2019/12/reactivated-blog-with-hugo/</guid><description>Somehow over time bitrot appeared in my Hugo setup. Files where ok for a very old version, but config changes no longer followed the newer conventions as suggested by Hugo. Also my carefully adapted theme had fallen to pieces and didn't render no more, so Tranquilpeak theme to the rescue!
-Also automation happened and we now have Github Actions which is a perfect solution to build and deploy Hugo pages to GitHub Pages.</description></item><item><title>PentahoNL meetup March 2017 recap</title><link>https://blijblijblij.com/2017/03/pentahonl-meetup-march-2017-recap/</link><pubDate>Fri, 17 Mar 2017 11:29:17 +0100</pubDate><guid>https://blijblijblij.com/2017/03/pentahonl-meetup-march-2017-recap/</guid><description>Great vibe, interesting talks We had another great PentahoNL meetup last week.
-This session was hosted by Rob Smienk at the offices of @MRDM in Deventer. @MRDM is a company specialized in aggregating Medical data and registration data to gather better insights in Medical processes and treatment outcomes.
-Hospitals and University Medical Centers increasingly need to report and clarify on Costs and Quality of medical treatments. They gather data from connected Hospitals, aggregate and benchmark the results.</description></item><item><title>Setup an easy reverse proxy to the biserver</title><link>https://blijblijblij.com/2016/12/easy-proxy-for-biserver/</link><pubDate>Sat, 10 Dec 2016 13:00:00 +0100</pubDate><guid>https://blijblijblij.com/2016/12/easy-proxy-for-biserver/</guid><description>Problem You have a biserver serving up information either directly or embedded into some website. You need to open up the biserver to the rest of the world but want to prevent access to certain endpoints. These endpoints might serve only internal consumers, or have security implications.
-We need to limit the attack service of a biserver!
-Traditionally one would spin up a new server, add an apache config to proxy forward some requests to the backend.</description></item><item><title>Slack update from pdi</title><link>https://blijblijblij.com/2016/11/slack-update-from-pdi/</link><pubDate>Sat, 19 Nov 2016 10:00:04 +0100</pubDate><guid>https://blijblijblij.com/2016/11/slack-update-from-pdi/</guid><description>Data-transform your slack channels In my humble opinion Slack is a fantastic tool for keeping development teams aligned and informed. It has (irc supported) chat, voice calls, proper code snippet sharing but it really shines in its ability to integrate all that is important to a team.
-For example we integrate:
-updates on github, Pull requests, comments, &amp;hellip; updates on tickets, new, open, closed tickets updates from ci, builds, tests, the occasional #FAIL updates from deploys instantiated from ci onto the mesos cluster updates on failing services and network components from nagios bash scripts synchronising in the background or via cron One thing was missing Updates from pesky long running etl-jobs, while being away from the vpn-ed carte status page.</description></item><item><title>Running pentaho on mesos - part 1</title><link>https://blijblijblij.com/2016/05/pentaho-and-mesos/</link><pubDate>Sat, 21 May 2016 11:06:05 +0200</pubDate><guid>https://blijblijblij.com/2016/05/pentaho-and-mesos/</guid><description>Introduction I have been amazed by the ease of getting software through the software development cycle once you start doing it the Docker way. I picked it up soon after it came to light, and hammered it hard. At that point I got all developers aligned to use Docker as well.
-As we started using Docker more extensively, combining different Frontends services and Backends services through Docker compositions, running multiple hosts, intranet, things started to get a bit more complicated.</description></item><item><title>Pentaho NL spring meetup</title><link>https://blijblijblij.com/2016/05/pentahanl-spring-meetup/</link><pubDate>Wed, 11 May 2016 07:00:32 +0200</pubDate><guid>https://blijblijblij.com/2016/05/pentahanl-spring-meetup/</guid><description>Last month we gathered for the second Pentaho NL meetup. @Incentro were sponsoring the location (their office at former Airport Ypenburg) as well as some excellent food and drinks, much appreciated guys!
-Again we had an impressive turn up, some new faces, some more familiar, a good mix for sharing and discussing life, the universe, and well, Pentaho stuff&amp;hellip;
-Data Virtualization with PDI Community Edition Edwin Weber
-Edwin challenged the demo-gods, they got the better off him.</description></item><item><title>Jekyll boooh, hugo yeah!</title><link>https://blijblijblij.com/2016/05/jekyll-to-hugo/</link><pubDate>Tue, 03 May 2016 16:13:59 +0200</pubDate><guid>https://blijblijblij.com/2016/05/jekyll-to-hugo/</guid><description>Not that long ago I migrated my blog to github pages using Jekyll. Jekyll is a static website generator. You write some intermediate markdown pages, cheat some markup and the generator will build the static website for you, rss feeds, navigation and the whole shebang included.
-BUT the sm-meister that wrote Jekyll went through some hard, breaking and annoying changes. Probably very sound changes, but I want something that works, takes little effort to maintain, yet slightly more appealing than</description></item><item><title>Update: First pentaho nl meetup!</title><link>https://blijblijblij.com/2016/04/2016-04-26-first-meetup-update/</link><pubDate>Tue, 26 Apr 2016 23:03:34 +0200</pubDate><guid>https://blijblijblij.com/2016/04/2016-04-26-first-meetup-update/</guid><description>Tools Dashboards are Awesome! Julien Hofstede This presentation showed some techniques to make development of the dashboards easier like reusable components and global settings. And even to create your own component! Take the step beyond CDE and leverage the full power of CDF! No knowledge or experience with CDF? No worries! It will for sure help you to understand the concept of CDF better.
-Julien also demo-ed a lot, styling a set of components in an instant just by implementing a standard layout, and reusing that in several graphs extending that standard layout!</description></item><item><title>First pentaho nl meetup!</title><link>https://blijblijblij.com/2016/01/2016-01-30-first-meetup/</link><pubDate>Sat, 30 Jan 2016 23:02:54 +0200</pubDate><guid>https://blijblijblij.com/2016/01/2016-01-30-first-meetup/</guid><description>Busy times, so with a slight delay a recap of our very first pentaho NL meetup.
-ReelMetrics supplied a nice venue for this first meetup, took care off much appreciated beers and pizza's. After these refreshments we had some nice talks covering a wide range of functionalities within the Pentaho ecosphere.
-Intro From a yearly gathering somewhere in Europe, why not do a dutch equivalent every couple of months?! As open-source is thriving, community initiatives become even more important, and more than enough people doing Pentaho stuff in The Netherlands, so we gave it a try!</description></item><item><title>From blogspot to github.io</title><link>https://blijblijblij.com/2015/11/2015-11-16-newblog/</link><pubDate>Mon, 16 Nov 2015 23:02:34 +0200</pubDate><guid>https://blijblijblij.com/2015/11/2015-11-16-newblog/</guid><description>My blogspot blog has been dead for years, not good! There wasn't much to blah about, also writing something technical on blogspot with nice formating like&amp;hellip;
-{ &amp;quot;id&amp;quot;: &amp;quot;/pentaho/biserver/biserver.1.2&amp;quot;, &amp;quot;cpus&amp;quot;: 0.25, &amp;quot;mem&amp;quot;: 1024.0, &amp;quot;instances&amp;quot;: 1, &amp;quot;container&amp;quot;: { &amp;quot;type&amp;quot;: &amp;quot;DOCKER&amp;quot;, &amp;quot;docker&amp;quot;: { &amp;quot;image&amp;quot;: &amp;quot;pentaho/biserver:1.2&amp;quot;, &amp;quot;network&amp;quot;: &amp;quot;BRIDGE&amp;quot;, &amp;quot;portMappings&amp;quot;: [{ &amp;quot;containerPort&amp;quot;: 8080, &amp;quot;hostPort&amp;quot;: 0, &amp;quot;servicePort&amp;quot;: 0, &amp;quot;protocol&amp;quot;: &amp;quot;tcp&amp;quot; }] } }, &amp;quot;healthChecks&amp;quot;: [ { &amp;quot;protocol&amp;quot;: &amp;quot;HTTP&amp;quot;, &amp;quot;path&amp;quot;: &amp;quot;/_status&amp;quot;, &amp;quot;portIndex&amp;quot;: 0, &amp;quot;gracePeriodSeconds&amp;quot;: 200, &amp;quot;intervalSeconds&amp;quot;: 10, &amp;quot;timeoutSeconds&amp;quot;: 5, &amp;quot;maxConsecutiveFailures&amp;quot;: 3 } ] } &amp;hellip; makes you wanna shoot yourself and burry that blog far far away.</description></item><item><title>Pentaho NL Usergroup!</title><link>https://blijblijblij.com/2015/11/2015-11-10-pentaho-nl/</link><pubDate>Tue, 10 Nov 2015 23:02:04 +0200</pubDate><guid>https://blijblijblij.com/2015/11/2015-11-10-pentaho-nl/</guid><description>Last weekend the European Pentaho User meetup #pcm15 was held in London. Two days of hacking, technical talks and beer was the perfect recipe to make a great meeting. We had great talks, and I caught up with some Dutch colleagues and we concluded there should be some local NL followup to this community initiative!
-So here it is, a Pentaho NL Usergroup, and it would not be a meetup if there wasn't any tweettweet&amp;hellip;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://blijblijblij.com/index.xml" rel="self" type="application/atom+xml" /><link href="https://blijblijblij.com/" rel="alternate" type="text/html" /><updated>2021-02-14T11:53:17+01:00</updated><id>https://blijblijblij.com/index.xml</id><title type="html">blijblijblij.com</title><subtitle>Recent content on blijblijblij.com</subtitle><entry><title type="html">Reactivated Blog With Jekyll</title><link href="https://blijblijblij.com/2021/02/14/Reactivated-blog-with-jekyll.html" rel="alternate" type="text/html" title="Reactivated Blog With Jekyll" /><published>2021-02-14T00:00:00+01:00</published><updated>2021-02-14T00:00:00+01:00</updated><id>https://blijblijblij.com/2021/02/14/Reactivated-blog-with-jekyll</id><content type="html" xml:base="https://blijblijblij.com/2021/02/14/Reactivated-blog-with-jekyll.html">&lt;p&gt;Hugo broke on github (pages) after not writing anything for over a year,
+moved things over to jekyll to give it another try…&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Annoying that these things do need seem to be keeping themselves stable in less than a year…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;One benefit off this breakage, I found yet another simpler theme to keep it KISS&lt;/p&gt;</content><author><name>Rogier Wessel</name></author><summary type="html">Hugo broke on github (pages) after not writing anything for over a year, moved things over to jekyll to give it another try…</summary></entry><entry><title type="html">Reactivated Blog With Hugo</title><link href="https://blijblijblij.com/2019/12/30/Reactivated-blog-with-hugo.html" rel="alternate" type="text/html" title="Reactivated Blog With Hugo" /><published>2019-12-30T20:08:15+01:00</published><updated>2019-12-30T20:08:15+01:00</updated><id>https://blijblijblij.com/2019/12/30/Reactivated-blog-with-hugo</id><content type="html" xml:base="https://blijblijblij.com/2019/12/30/Reactivated-blog-with-hugo.html">&lt;p&gt;Somehow over time bitrot appeared in my &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt; setup. Files where ok 
+for a very old version, but config changes no longer followed the newer 
+conventions as suggested by Hugo. Also my carefully adapted
+theme had fallen to pieces and didn’t render no more, so &lt;a href=&quot;https://github.com/kakawait/hugo-tranquilpeak-theme/&quot;&gt;Tranquilpeak theme&lt;/a&gt; 
+to the rescue!&lt;/p&gt;
+
+&lt;p&gt;Also automation happened and we now have &lt;a href=&quot;https://github.com/features/actions&quot;&gt;Github Actions&lt;/a&gt; which is a 
+perfect solution to build and deploy Hugo pages to &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Github-pages is an excellent service
+supporting the hosting of static websites, ssl included, also 
+&lt;a href=&quot;https://help.github.com/en/github/working-with-github-pages/about-custom-domains-and-github-pages&quot;&gt;custom domain names are supported&lt;/a&gt; allowing me to host via Github
+Pages but on my own domain &lt;a href=&quot;https://blijblijblij.com&quot;&gt;https://blijblijblij.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2019-12-30-git-settings.png&quot; alt=&quot;Git settings&quot; title=&quot;Git settings&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This config (as described by
+&lt;a href=&quot;https://github.com/peaceiris/actions-hugo&quot;&gt;peaceiris/actions-hugo
+&lt;/a&gt;) should get you going:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Push to GitHub Pages on push to master&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;branches&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;master&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;build-deploy&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ubuntu-18.04&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;actions/checkout@v1&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;submodules&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Setup Hugo&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;peaceiris/actions-hugo@v2&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;hugo-version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;latest'&lt;/span&gt;
+
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Build&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;hugo --minify&lt;/span&gt;
+
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Deploy&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;peaceiris/actions-gh-pages@v2&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;ACTIONS_DEPLOY_KEY&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;PUBLISH_BRANCH&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gh-pages&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;PUBLISH_DIR&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./public&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;But more information can be found on this &lt;a href=&quot;https://github.com/peaceiris/actions-hugo&quot;&gt;peaceiris/actions-hugo
+&lt;/a&gt; page.&lt;/p&gt;</content><author><name>Rogier Wessel</name></author><summary type="html">Somehow over time bitrot appeared in my Hugo setup. Files where ok for a very old version, but config changes no longer followed the newer conventions as suggested by Hugo. Also my carefully adapted theme had fallen to pieces and didn’t render no more, so Tranquilpeak theme to the rescue!</summary></entry><entry><title type="html">PentahoNL meetup March 2017 recap</title><link href="https://blijblijblij.com/2017/03/17/pentahonl-recap.html" rel="alternate" type="text/html" title="PentahoNL meetup March 2017 recap" /><published>2017-03-17T00:00:00+01:00</published><updated>2017-03-17T00:00:00+01:00</updated><id>https://blijblijblij.com/2017/03/17/pentahonl-recap</id><content type="html" xml:base="https://blijblijblij.com/2017/03/17/pentahonl-recap.html">&lt;h1 id=&quot;great-vibe-interesting-talks&quot;&gt;Great vibe, interesting talks&lt;/h1&gt;
+
+&lt;p&gt;We had another great &lt;a href=&quot;https://www.meetup.com/Pentaho-NL-Meetup/events/236959320/&quot;&gt;PentahoNL&lt;/a&gt; meetup last week.&lt;/p&gt;
+
+&lt;p&gt;This session was hosted by &lt;a href=&quot;https://twitter.com/maskerade1&quot;&gt;Rob Smienk&lt;/a&gt; at the offices of  &lt;a href=&quot;https://twitter.com/_mrdm_&quot;&gt;@&lt;em&gt;MRDM&lt;/em&gt;&lt;/a&gt; in Deventer. &lt;a href=&quot;https://twitter.com/_mrdm_&quot;&gt;@&lt;em&gt;MRDM&lt;/em&gt;&lt;/a&gt; is a company specialized in aggregating Medical data and registration data to gather better insights in Medical processes and treatment outcomes.&lt;/p&gt;
+
+&lt;p&gt;Hospitals and University Medical Centers increasingly need to report and clarify on Costs and Quality of medical treatments. They gather data from connected Hospitals, aggregate and benchmark the results. They are growing fast, moving into other European markets as we speak, and are actively &lt;a href=&quot;https://www.mrdm.nl/page/vacatures&quot;&gt;seeking new keyboard cowboys&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;mrdm-pdi-by-components&quot;&gt;MRDM: PDI by components&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Rob Smienk&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Metadata driven highly componentized etl as developed at MRDM. By building small components and glueing them together with a homemade orchestration framework these guys are able to quickly onboard new datasets by mix and matching suitable components. Highly agile, I was impressed and inspired by their approach.&lt;/p&gt;
+
+&lt;iframe id=&quot;iframe_container&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; width=&quot;700&quot; height=&quot;510&quot; src=&quot;https://prezi.com/embed/5kov4ml6fyre/?bgcolor=ffffff&amp;amp;lock_to_path=0&amp;amp;autoplay=0&amp;amp;autohide_ctrls=0&amp;amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE1iOUU4aWJ6aDNMU2VEWHN4MlNURGwvc3BCa1poUnZWSDJKcWxmNzhxcz0&amp;amp;landing_sign=mNxxS6ytyAfMBJ75uob9akE2xSQpZi0EzJVI0sPYrvY&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;mrdm-etl-testing&quot;&gt;MRDM: ETL testing&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Rutger Deterd Oude Weme&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The small components suite perfectly for TDD &lt;a href=&quot;https://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;(Test Driven Development)&lt;/a&gt;, it was the first group I have seen following up so strongly on TDD in the Pentaho “ecosphere”, should be applied much more (at least I’ll try to follow up on their guidelines more seriously).&lt;/p&gt;
+
+&lt;iframe id=&quot;iframe_container&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; width=&quot;700&quot; height=&quot;510&quot; src=&quot;https://prezi.com/embed/wcpw8wjmrfad/?bgcolor=ffffff&amp;amp;lock_to_path=0&amp;amp;autoplay=0&amp;amp;autohide_ctrls=0&amp;amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE1iOUU4aWJ6aDNMU2VEWHN4M0R5NE1adDArMHBKZFZ5eUhsWm5GT0RXcz0&amp;amp;landing_sign=kkGb--EbKdlhnoHws1pXgwd6GVWYTg-N5CcVs3aUb4I&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;continuous-delivery-of-etl-from-git-to-carte-in-a-couple-off-secs&quot;&gt;Continuous Delivery of Etl, from git to carte in a (couple off) sec(s)&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Rogier Wessel&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/blijblijblij/presentations/blob/develop/201703%20-%20pentaho%20nl%20meetup/Continuous%20Delivery%20of%20Etl%2C%20from%20git%20to%20carte%20in%20a%20(couple%20off)%20sec(s).pdf&quot;&gt;I talked but mostly demo-ed&lt;/a&gt; our Continuous Delivery setup. We utilize the power of Docker, Apache Mesos with some help of a CI (Teamcity) to quickly build and deploy new ETL as it gets committed to git(hub).&lt;/p&gt;
+
+&lt;h1 id=&quot;to-conclude&quot;&gt;To conclude&lt;/h1&gt;
+&lt;p&gt;I think the combination of talks was very complementary, from different points of the challenge of building solid ETL we showed how to make finely grained, highly testable and quickly releasable code.&lt;/p&gt;
+
+&lt;p&gt;Really wonder what will be next time, hope to see you guys soon!&lt;/p&gt;</content><author><name></name></author><summary type="html">Great vibe, interesting talks</summary></entry><entry><title type="html">Setup an easy reverse proxy to the biserver</title><link href="https://blijblijblij.com/2016/12/10/easy-proxy-for-biserver.html" rel="alternate" type="text/html" title="Setup an easy reverse proxy to the biserver" /><published>2016-12-10T00:00:00+01:00</published><updated>2016-12-10T00:00:00+01:00</updated><id>https://blijblijblij.com/2016/12/10/easy-proxy-for-biserver</id><content type="html" xml:base="https://blijblijblij.com/2016/12/10/easy-proxy-for-biserver.html">&lt;h1 id=&quot;problem&quot;&gt;Problem&lt;/h1&gt;
+
+&lt;p&gt;You have a biserver serving up information either directly or embedded into
+some website. You need to open up the biserver to the rest of the world but want
+to prevent access to certain endpoints. These endpoints might serve only internal
+consumers, or have security implications.&lt;/p&gt;
+
+&lt;p&gt;We need to limit the attack service of a biserver!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/mayday.png&quot; alt=&quot;proxy it&quot; title=&quot;proxy it&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Traditionally one would spin up a new server, add an apache config to proxy forward
+some requests to the backend. This adds complexity, moving parts, and lowers
+agility.&lt;/p&gt;
+
+&lt;p&gt;In this post I’ll suggest a simplification of the same approach, just in a
+slightly more flexible way, obviously we’ll containerize it.&lt;/p&gt;
+
+&lt;h1 id=&quot;solution&quot;&gt;Solution&lt;/h1&gt;
+
+&lt;h2 id=&quot;ingredients&quot;&gt;Ingredients&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a &lt;a href=&quot;https://github.com/docker/dockercloud-haproxy&quot;&gt;haproxy container&lt;/a&gt; with a pretty impressive featureset&lt;/li&gt;
+  &lt;li&gt;a biserver 6.1 container with a wildly impressive &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HelloWorld&lt;/code&gt; cde dashboard &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/pentaho/api/repos/%3Apublic%3AHelloWorld.wcdf/generatedContent&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;a canary container that will informs us about missing resources&lt;/li&gt;
+  &lt;li&gt;a docker-composition to glue these together:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;version: &lt;span class=&quot;s1&quot;&gt;'2'&lt;/span&gt;
+services:
+  biserver:
+    image: pentaho/biserver:6.1
+    ports:
+      - 8080:8080
+    environment:
+      - &lt;span class=&quot;nv&quot;&gt;VIRTUAL_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;...
+      - &lt;span class=&quot;nv&quot;&gt;VIRTUAL_HOST_WEIGHT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2
+  canary:
+    image: httpd:latest
+    environment:
+      - &lt;span class=&quot;nv&quot;&gt;VIRTUAL_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+      - &lt;span class=&quot;nv&quot;&gt;VIRTUAL_HOST_WEIGHT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+  proxy:
+    image: dockercloud/haproxy
+    links:
+      - biserver
+      - canary
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;round-1&quot;&gt;Round 1&lt;/h2&gt;
+
+&lt;p&gt;We utilise the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VIRTUAL_HOST&lt;/code&gt; &lt;a href=&quot;https://github.com/docker/dockercloud-haproxy#global-and-default-settings-of-haproxy&quot;&gt;options&lt;/a&gt; of the proxy to whitelist our epic HelloWorld dashboard. By giving the proxy a higher &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VIRTUAL_HOST_WEIGHT&lt;/code&gt; we force traffic to first route via this &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VIRTUAL_HOST&lt;/code&gt; everything else falls through onto the canary container.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;VIRTUAL_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;/pentaho/api/repos/%3Apublic%3AHelloWorld.wcdf/generatedContent
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Looking at the dashboard directly.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-12-10_biserver direct.png&quot; alt=&quot;unproxied&quot; title=&quot;unproxied&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, lets view it via the proxy
+&lt;img src=&quot;/assets/images/2016-12-10_biserverproxied.png&quot; alt=&quot;proxied&quot; title=&quot;proxied&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But oh, the horror of my carefully crafted indenting, it has gone all haywire. And when we inspect the page we see what’s going wrong:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-12-10_styling_horrors.png&quot; alt=&quot;styling horrors&quot; title=&quot;styling horrors&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And funny enough, now the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;canary&lt;/code&gt; container comes to offer the same insight as well:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:09:49 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf/js/cdf-bootstrap-script-includes.js?v=decdbcb3b01341682f2ef9799798313c HTTP/1.1&quot;&lt;/span&gt; 404 263
+canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:09:49 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf/css/cdf-bootstrap-style-includes.css?v=7bc42bb099ded22348e9c9b992045d67 HTTP/1.1&quot;&lt;/span&gt; 404 264
+canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:09:49 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf-dd/js/CDF.js?v=7591bba3804971aeae31ca943022aba2 HTTP/1.1&quot;&lt;/span&gt; 404 240
+canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:09:49 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf-dd/css/CDF-CSS.css?v=9dd48fd0265f0d8bcc30ac6afec3f0ff HTTP/1.1&quot;&lt;/span&gt; 404 246
+canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:09:52 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf/js/cdf-bootstrap-script-includes.js?v=decdbcb3b01341682f2ef9799798313c HTTP/1.1&quot;&lt;/span&gt; 404 263
+canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:09:52 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf/css/cdf-bootstrap-style-includes.css?v=7bc42bb099ded22348e9c9b992045d67 HTTP/1.1&quot;&lt;/span&gt; 404 264
+canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:09:52 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf-dd/js/CDF.js?v=7591bba3804971aeae31ca943022aba2 HTTP/1.1&quot;&lt;/span&gt; 404 240
+canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:09:52 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf-dd/css/CDF-CSS.css?v=9dd48fd0265f0d8bcc30ac6afec3f0ff HTTP/1.1&quot;&lt;/span&gt; 404 246
+canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:11:09 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf/js/cdf-bootstrap-script-includes.js?v=decdbcb3b01341682f2ef9799798313c HTTP/1.1&quot;&lt;/span&gt; 404 263
+canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:11:09 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf/css/cdf-bootstrap-style-includes.css?v=7bc42bb099ded22348e9c9b992045d67 HTTP/1.1&quot;&lt;/span&gt; 404 264
+canary_1    | 172.18.0.4 - - &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;10/Dec/2016:20:11:09 +0000] &lt;span class=&quot;s2&quot;&gt;&quot;GET /pentaho/api/repos/pentaho-cdf-dd/js/CDF.js?v=7591bba3804971aeae31ca943022aba2 HTTP/1.1&quot;&lt;/span&gt; 404 240
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;round-2&quot;&gt;Round 2&lt;/h2&gt;
+&lt;p&gt;So we whitelist two more paths:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/pentaho/api/repos/pentaho-cdf/js/*&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/pentaho/api/repos/pentaho-cdf/css/*&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;VIRTUAL_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;/pentaho/api/repos/%3Apublic%3AHelloWorld.wcdf/generatedContent,http://&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;/pentaho/api/repos/pentaho-cdf/css/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;,http://&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;/pentaho/api/repos/pentaho-cdf/js/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Et voila, indenting back from the death, but carefully proxied for only that particular resource we wanted to expose to the world &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:-)&lt;/code&gt;
+&lt;img src=&quot;/assets/images/2016-12-10_epic_dashboard.png&quot; alt=&quot;epic&quot; title=&quot;epic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So the final composition looks like:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;version: &lt;span class=&quot;s1&quot;&gt;'2'&lt;/span&gt;
+services:
+  biserver:
+    image: pentaho/biserver:6.1
+    ports:
+      - 8080
+    environment:
+      - &lt;span class=&quot;nv&quot;&gt;VIRTUAL_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;/pentaho/api/repos/%3Apublic%3AHelloWorld.wcdf/generatedContent,http://&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;/pentaho/api/repos/pentaho-cdf/css/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;,http://&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;/pentaho/api/repos/pentaho-cdf/js/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+      - &lt;span class=&quot;nv&quot;&gt;VIRTUAL_HOST_WEIGHT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2
+      - &lt;span class=&quot;nv&quot;&gt;GZIP_COMPRESSION_TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;text/html text/plain text/css text/javascript application/json
+  canary:
+    image: httpd:latest
+    environment:
+      - &lt;span class=&quot;nv&quot;&gt;VIRTUAL_HOST&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+      - &lt;span class=&quot;nv&quot;&gt;VIRTUAL_HOST_WEIGHT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+      - &lt;span class=&quot;nv&quot;&gt;GZIP_COMPRESSION_TYPE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;text/html text/plain text/css text/javascript application/json
+  proxy:
+    image: dockercloud/haproxy
+    links:
+      - biserver
+      - canary
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We have locked up the biserver completely, and we can dive deeper into the &lt;a href=&quot;https://github.com/docker/dockercloud-haproxy#global-and-default-settings-of-haproxy&quot;&gt;magic of the haproxy container&lt;/a&gt;,
+as it can do easy ssl termination as well, just change the proxy to:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;proxy:
+  image: dockercloud/haproxy
+  environment:
+    - &lt;span class=&quot;nv&quot;&gt;DEFAULT_SSL_CERT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-----&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; my cert goes here
+  links:
+    - biserver
+    - canary
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  ports:
+    - 443:443
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Problem</summary></entry><entry><title type="html">Slack update from pdi</title><link href="https://blijblijblij.com/2016/11/19/slack-update-from-pdi.html" rel="alternate" type="text/html" title="Slack update from pdi" /><published>2016-11-19T00:00:00+01:00</published><updated>2016-11-19T00:00:00+01:00</updated><id>https://blijblijblij.com/2016/11/19/slack-update-from-pdi</id><content type="html" xml:base="https://blijblijblij.com/2016/11/19/slack-update-from-pdi.html">&lt;h1 id=&quot;data-transform-your-slack-channels&quot;&gt;Data-transform your slack channels&lt;/h1&gt;
+&lt;p&gt;In my humble opinion &lt;a href=&quot;https://slack.com/&quot;&gt;Slack&lt;/a&gt; is a fantastic tool for keeping development teams aligned and informed. It has (irc supported) chat, &lt;a href=&quot;https://get.slack.help/hc/en-us/articles/216771908-Start-a-voice-call-in-Slack&quot;&gt;voice calls&lt;/a&gt;, proper code snippet sharing but it really shines in its ability to &lt;a href=&quot;https://api.slack.com/custom-integrations&quot;&gt;integrate all that is important to a team&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example we integrate:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;updates on github, Pull requests, comments, …&lt;/li&gt;
+  &lt;li&gt;updates on tickets, new, open, closed tickets&lt;/li&gt;
+  &lt;li&gt;updates from ci, builds, tests, the occasional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#FAIL&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;updates from deploys instantiated from ci onto the mesos cluster&lt;/li&gt;
+  &lt;li&gt;updates on failing services and network components from nagios&lt;/li&gt;
+  &lt;li&gt;bash scripts synchronising in the background or via cron&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;one-thing-was-missing&quot;&gt;One thing was missing&lt;/h2&gt;
+
+&lt;p&gt;Updates from pesky long running etl-jobs, while being away from the vpn-ed carte status page. And a convenient way of updating fellow &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;are-we-there-yet-are-we-there-yet-are-we-there-yet-are-we-there-yet-&lt;/code&gt; colleagues ;-).&lt;/p&gt;
+
+&lt;h2 id=&quot;enter-the-slack-incoming-webhook&quot;&gt;Enter the slack incoming webhook&lt;/h2&gt;
+&lt;p&gt;Slacks &lt;a href=&quot;https://api.slack.com/incoming-webhooks&quot;&gt;incoming-webhook&lt;/a&gt; is simple, easy to understand and can be extended to support a lot of feedback:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;--data-urlencode&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'payload={&quot;text&quot;:&quot;This is a line of text.\nAnd this is another one.&quot;}'&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Pdi can do this nicely, and posting it to a slack endpoint seems a no brainer. So for something to be usefull it has to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;update on starting a job&lt;/li&gt;
+  &lt;li&gt;update on sub jobs / transformations&lt;/li&gt;
+  &lt;li&gt;escalate on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#FAIL&lt;/code&gt;-ed data transformations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;do-it&quot;&gt;Do it&lt;/h2&gt;
+
+&lt;p&gt;A reporting transformation that delivers the very same json, but with some additions:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-11-19_tr_report.png&quot; alt=&quot;report to slack&quot; title=&quot;report to slack&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Script the json with javascript:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+	&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;channel&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;channel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;username&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+	&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;text&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;attachments&quot;: [&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+        &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+            &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;title&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+            &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;text&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+			&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;fallback&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;,&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+            &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;color&quot;: &quot;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+        &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;};&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Incorperate the slack reporting into a bigger picture:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-11-19_jb_main.png&quot; alt=&quot;main job&quot; title=&quot;main job&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Et voila, some slack updates:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2016-11-19_slack_updated.png&quot; alt=&quot;on slack&quot; title=&quot;on slack&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;thin-foil-hat&quot;&gt;Thin foil hat&lt;/h2&gt;
+&lt;p&gt;This thing is updating from internal sources onto semi-public services, save to say to not stick any comprising data in those shiny new status updates…&lt;/p&gt;
+
+&lt;h2 id=&quot;source-kjb--ktr&quot;&gt;Source kjb / ktr&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/blijblijblij/pdi-slack-reporting/archive/version-Release-1.zip&quot;&gt;link&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Data-transform your slack channels In my humble opinion Slack is a fantastic tool for keeping development teams aligned and informed. It has (irc supported) chat, voice calls, proper code snippet sharing but it really shines in its ability to integrate all that is important to a team.</summary></entry><entry><title type="html">Running pentaho on mesos - part 1</title><link href="https://blijblijblij.com/2016/05/21/pentaho-and-mesos.html" rel="alternate" type="text/html" title="Running pentaho on mesos - part 1" /><published>2016-05-21T00:00:00+02:00</published><updated>2016-05-21T00:00:00+02:00</updated><id>https://blijblijblij.com/2016/05/21/pentaho-and-mesos</id><content type="html" xml:base="https://blijblijblij.com/2016/05/21/pentaho-and-mesos.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;I have been amazed by the ease of getting software through the software development cycle once you start doing it the &lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt; way. I picked it up soon after &lt;a href=&quot;http://www.wired.com/2013/09/docker/&quot;&gt;it came to light&lt;/a&gt;, and hammered it hard. At that point I got all developers aligned to use Docker as well.&lt;/p&gt;
+
+&lt;p&gt;As we started using Docker more extensively, combining different Frontends services and Backends services through Docker compositions, running multiple hosts, intranet, things started to get a bit more complicated.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/adrianmouat&quot;&gt;Adrian Mouat&lt;/a&gt; acknowledged my next step in a piece he wrote for Oreilly &lt;a href=&quot;https://www.oreilly.com/ideas/swarm-v-fleet-v-kubernetes-v-mesos&quot;&gt;Swarm v. Fleet v. Kubernetes v. Mesos Comparing different orchestration tools&lt;/a&gt; my prefered orchestration framework for our containers would be Mesos.&lt;/p&gt;
+
+&lt;h1 id=&quot;define&quot;&gt;Define&lt;/h1&gt;
+&lt;p&gt;This is an overview of a mesos cluster in its simplest form.
+&lt;img src=&quot;https://raw.githubusercontent.com/blijblijblij/blog.blijblijblij.com-hugo/9dafdf22f19d04c63eb47e2c9681884694887156/static/images/mesos-arch.png&quot; alt=&quot;Mesos architectural overview&quot; /&gt;
+&lt;a href=&quot;https://www.oreilly.com/ideas/swarm-v-fleet-v-kubernetes-v-mesos&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The mesos-master&lt;/strong&gt; is the central part of the cluster, it controls all jobs on the cluster. Usually multiple masters are running on a cluster, thereby given it HA capabilities, especially when running the masters in different &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions-availability-zones&quot;&gt;availability zones&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The marathon scheduler&lt;/strong&gt; is the scheduler for long running processes, a webserver, a carte server, a baserver, … The functionality of Marathon on the cluster is often compared to what &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;init.d&lt;/code&gt; leverages on a linux system. To run services, keep them running, scale them etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The chronos scheduler&lt;/strong&gt; is a scheduler batch task, and as such often compared to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cron&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;The mesos slaves aka agents&lt;/strong&gt; run the actual jobs as directed by the mesos master(s)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Zookeeper&lt;/strong&gt; is used for master elections, coordination and to persist configuration throughout the cluster.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is so much more to be told about mesos, but I suggest you just &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Run, Forrest, Run!&lt;/code&gt; to &lt;a href=&quot;http://ssearch.oreilly.com/?q=mesos&amp;amp;x=0&amp;amp;y=0&quot;&gt;Oreilly&lt;/a&gt;, &lt;a href=&quot;https://www.manning.com/books/mesos-in-action&quot;&gt;Manning&lt;/a&gt; or some other it-drug delivery service and read up on this topic.&lt;/p&gt;
+&lt;h1 id=&quot;create&quot;&gt;Create&lt;/h1&gt;
+&lt;p&gt;I am going to assume a working &lt;a href=&quot;https://docs.docker.com/engine/installation/&quot;&gt;docker&lt;/a&gt; / &lt;a href=&quot;https://docs.docker.com/compose/install/&quot;&gt;docker-compose&lt;/a&gt; / &lt;a href=&quot;https://docs.docker.com/machine/install-machine/&quot;&gt;docker-machine&lt;/a&gt; setup, some recent hardware.&lt;/p&gt;
+
+&lt;p&gt;For now I will focus on a virtualbox based cluster running locally. I have created a crude but usefull bash-script to get you up and running, it cleans, creates masters, slave and a loadbalancer by utilising docker-machine. I have 4cpu, 16G of RAM at my disposal, just tinker with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtualbox-cpu-count&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtualbox-memory&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtualbox-disk-size&lt;/code&gt; to make this baby fit your needs.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#!/bin/sh
+clear
+
+echo &quot;creating my epic local cluster&quot;
+
+clean() {
+  echo &quot;---&amp;gt; rm old machines, no mercy baby!&quot;
+  docker-machine rm -f mesos-lb1 mesos-m1 mesos-m2 mesos-m3 mesos-s1 mesos-s2 &amp;gt; /dev/null
+}
+
+create_masters() {
+  echo &quot;---&amp;gt; create masters&quot;
+  echo &quot;---&amp;gt; create mesos-m1&quot;
+  docker-machine create -d virtualbox \
+    --virtualbox-cpu-count &quot;1&quot; \
+    --virtualbox-memory &quot;1024&quot; \
+    --virtualbox-disk-size &quot;50000&quot; \
+    mesos-m1
+
+  echo &quot;---&amp;gt; create mesos-m2&quot;
+  docker-machine create -d virtualbox \
+    --virtualbox-cpu-count &quot;1&quot; \
+    --virtualbox-memory &quot;1024&quot; \
+    --virtualbox-disk-size &quot;50000&quot; \
+    mesos-m2
+
+  echo &quot;---&amp;gt; create mesos-m3&quot;
+  docker-machine create -d virtualbox \
+    --virtualbox-cpu-count &quot;1&quot; \
+    --virtualbox-memory &quot;1024&quot; \
+    --virtualbox-disk-size &quot;50000&quot; \
+    mesos-m3
+}
+
+create_slaves() {
+  echo &quot;---&amp;gt; create slaves&quot;
+  echo &quot;---&amp;gt; create mesos-s1&quot;
+  docker-machine create -d virtualbox \
+    --virtualbox-cpu-count &quot;2&quot; \
+    --virtualbox-memory &quot;4092&quot; \
+    --virtualbox-disk-size &quot;50000&quot; \
+    mesos-s1
+
+  echo &quot;---&amp;gt; create mesos-s2&quot;
+  docker-machine create -d virtualbox \
+      --virtualbox-cpu-count &quot;2&quot; \
+      --virtualbox-memory &quot;4092&quot; \
+      --virtualbox-disk-size &quot;50000&quot; \
+      mesos-s2
+}
+
+create_loadbalancer() {
+  echo &quot;---&amp;gt; create loadbalancer&quot;
+  echo &quot;---&amp;gt; create mesos-lb1&quot;
+  docker-machine create -d virtualbox \
+    --virtualbox-cpu-count &quot;1&quot; \
+    --virtualbox-memory &quot;1024&quot; \
+    --virtualbox-disk-size &quot;50000&quot; \
+    mesos-lb1
+}
+main() {
+  clean
+  create_masters
+  create_slaves
+  create_loadbalancer
+  echo &quot;done&quot;
+}
+
+main
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After running this script, check the results:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-machine ls | grep virtualbox
+mesos-lb1                    -        virtualbox   Running   tcp://192.168.99.105:2376           v1.11.1   
+mesos-m1                     -        virtualbox   Running   tcp://192.168.99.100:2376           v1.11.1   
+mesos-m2                     -        virtualbox   Running   tcp://192.168.99.101:2376           v1.11.1   
+mesos-m3                     -        virtualbox   Running   tcp://192.168.99.102:2376           v1.11.1   
+mesos-s1                     -        virtualbox   Running   tcp://192.168.99.103:2376           v1.11.1   
+mesos-s2                     -        virtualbox   Running   tcp://192.168.99.104:2376           v1.11.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That was easy!&lt;/p&gt;
+
+&lt;h1 id=&quot;run&quot;&gt;Run&lt;/h1&gt;</content><author><name></name></author><summary type="html">Introduction I have been amazed by the ease of getting software through the software development cycle once you start doing it the Docker way. I picked it up soon after it came to light, and hammered it hard. At that point I got all developers aligned to use Docker as well.</summary></entry><entry><title type="html">Pentaho NL spring meetup</title><link href="https://blijblijblij.com/2016/05/11/pentaho-usergroup-spring-2016.html" rel="alternate" type="text/html" title="Pentaho NL spring meetup" /><published>2016-05-11T00:00:00+02:00</published><updated>2016-05-11T00:00:00+02:00</updated><id>https://blijblijblij.com/2016/05/11/pentaho-usergroup-spring-2016</id><content type="html" xml:base="https://blijblijblij.com/2016/05/11/pentaho-usergroup-spring-2016.html">&lt;p&gt;Last month we gathered for the second Pentaho NL meetup. &lt;a href=&quot;https://www.twitter.com/incentro&quot;&gt;@Incentro&lt;/a&gt; were sponsoring the location (their office at former Airport Ypenburg) as well as some excellent food and drinks, much appreciated guys!&lt;/p&gt;
+
+&lt;p&gt;Again we had an impressive turn up, some new faces, some more familiar, a good mix for sharing and discussing life, the universe, and well, &lt;a href=&quot;https://www.twitter.com/pentaho&quot;&gt;Pentaho&lt;/a&gt; stuff…&lt;/p&gt;
+
+&lt;h1 id=&quot;data-virtualization-with-pdi-community-edition&quot;&gt;Data Virtualization with PDI Community Edition&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Edwin Weber&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/blijblijblij/blog.blijblijblij.com/c38182b984a7481a01c0b0e84eb3b2e4a926eff7/images/2016-04-19-edwin.jpg&quot; alt=&quot;alt text&quot; title=&quot;Edwin on fire!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Edwin challenged the demo-gods, they got the better off him. But Edwin is a master (karate wise, as well as pentaho wise). He reclaimed his mastery and demo-ed Data Virtualization using the thin jdbc driver running sql queries on top of data transformations. Apparently this functionality still needs some hammering to get it to work. But from what I have heared Edwins work has already been relayed to another master, a new &lt;a href=&quot;https://twitter.com/diethardsteiner&quot;&gt;Diethard Steiner&lt;/a&gt; post should be in the makings.&lt;/p&gt;
+
+&lt;p&gt;As for &lt;a href=&quot;https://twitter.com/edwin_weber&quot;&gt;Edwins&lt;/a&gt; talk, here is the &lt;a href=&quot;https://github.com/blijblijblij/blog.blijblijblij.com/raw/0edeaeef6e7778ebac04579505e3418470d3eb91/pdf/20160503_data_virtualization_demo.pdf&quot;&gt;transscript&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;datastax-cassandra-plugin&quot;&gt;Datastax Cassandra plugin&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Rudmer van Dijk&lt;/em&gt;
+&lt;em&gt;The current Cassandra plugin from Pentaho uses an old driver which is unable to support secure SSL connections to the cluster. At Incentro we created a new plugin that utilises the Datastax driver so we can use the secure connection. I’ll give a walkthrough and demonstration of the three steps in this plugin.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Rudmer gave a demo about their newly developed Data Cassandra driver taking us through all functionalities.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/blijblijblij/blog.blijblijblij.com/master/images/2016-04-13-cassandra-driver.png&quot; alt=&quot;alt text&quot; title=&quot;In the marketplace&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It has been released from the marketplace, hooray on that!&lt;/p&gt;
+
+&lt;h1 id=&quot;tips-and-tricks-of-using-javascript-in-pdi&quot;&gt;Tips and Tricks of using JavaScript in PDI&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Julien Hofstede&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“We all agree: Kettle is awesome. But sometimes seemingly easy things are hard to accomplish, or just not possible with Kettle. I’ll show some easy and advanced uses of the JavaScript Step in PDI such as prompts, dynamic accessing of rows, calculations and filtering of rows.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Julien talk was very interesting, stressing the balance between doing it the Etl / pentaho way versus fixing it in one go in a javascript step. The javascript step is a very powerfull step (dating back to that very beginning of PDI) enabling you to dive deep inside the Pentaho data-integration application and exposing api’s unknown to most!&lt;/p&gt;
+
+&lt;p&gt;His talk can be found &lt;a href=&quot;https://github.com/blijblijblij/blog.blijblijblij.com/raw/master/pdf/20160513_JavaScript%20in%20PDI.pdf&quot;&gt;here&lt;/a&gt;, but make sure you dive into the &lt;a href=&quot;https://github.com/blijblijblij/blog.blijblijblij.com/raw/master/pdf/JavaScript%20in%20PDI.zip&quot;&gt;demo samples&lt;/a&gt; as well!!!&lt;/p&gt;
+
+&lt;p&gt;To conclude, another inspriring Pentaho NL meetup!&lt;/p&gt;</content><author><name></name></author><summary type="html">Last month we gathered for the second Pentaho NL meetup. @Incentro were sponsoring the location (their office at former Airport Ypenburg) as well as some excellent food and drinks, much appreciated guys!</summary></entry><entry><title type="html">Jekyll boooh, hugo yeah!</title><link href="https://blijblijblij.com/2016/05/03/jekyll-to-hugo.html" rel="alternate" type="text/html" title="Jekyll boooh, hugo yeah!" /><published>2016-05-03T00:00:00+02:00</published><updated>2016-05-03T00:00:00+02:00</updated><id>https://blijblijblij.com/2016/05/03/jekyll-to-hugo</id><content type="html" xml:base="https://blijblijblij.com/2016/05/03/jekyll-to-hugo.html">&lt;p&gt;Not that long ago I &lt;a href=&quot;/post/2015-11-16-newblog&quot;&gt;migrated my blog to github pages&lt;/a&gt; using  &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;. Jekyll is a &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;static website generator&lt;/a&gt;. You write some intermediate &lt;a href=&quot;https://en.wikipedia.org/wiki/Markdown&quot;&gt;markdown&lt;/a&gt; pages, &lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot;&gt;cheat some markup&lt;/a&gt; and the generator will build the static website for you, rss feeds, navigation and the whole shebang included.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BUT&lt;/strong&gt; the sm-meister that wrote Jekyll went through some hard, breaking and annoying changes. Probably very sound changes, but I want something that works, takes little effort to maintain, yet slightly more appealing than&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-type=html&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;body&amp;gt;
+
+&amp;lt;h1&amp;gt;My First Post&amp;lt;/h1&amp;gt;
+
+&amp;lt;p&amp;gt;Epic story goes here...&amp;lt;/p&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;enter-hugo&quot;&gt;Enter hugo&lt;/h1&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Hugo is great for content-driven websites, because it is completely dependency-free and is easy to get going. What it lacks for in extensibility, it largely makes up for with a good content model and super-fast build times.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Another quote I agree on&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Hugo is quite possibly the easiest to install software you’ve ever used, simply download and run. Hugo doesn’t depend on administrative privileges, databases, runtimes, interpreters or external libraries. Sites built with Hugo can be deployed on S3, GitHub Pages, Dropbox or any web host.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I’ll take it, after some hurdles migrated this blog into a Hugo-i-fied one, and yet again ready for blogging incontinence…&lt;/p&gt;
+
+&lt;p&gt;Some links:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/&quot;&gt;article on the battle of the static site generators&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/spf13/hugo/releases&quot;&gt;download hugo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gohugo.io/overview/quickstart/&quot;&gt;getting started&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Just my 2 cents, regards, Rogier&lt;/p&gt;</content><author><name></name></author><summary type="html">Not that long ago I migrated my blog to github pages using Jekyll. Jekyll is a static website generator. You write some intermediate markdown pages, cheat some markup and the generator will build the static website for you, rss feeds, navigation and the whole shebang included.</summary></entry><entry><title type="html">Update: First pentaho nl meetup!</title><link href="https://blijblijblij.com/2016/04/26/first-meetup-update.html" rel="alternate" type="text/html" title="Update: First pentaho nl meetup!" /><published>2016-04-26T00:00:00+02:00</published><updated>2016-04-26T00:00:00+02:00</updated><id>https://blijblijblij.com/2016/04/26/first-meetup-update</id><content type="html" xml:base="https://blijblijblij.com/2016/04/26/first-meetup-update.html">&lt;h1 id=&quot;tools-dashboards-are-awesome&quot;&gt;Tools Dashboards are Awesome!&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Julien Hofstede&lt;/em&gt; This presentation showed some techniques to make development of the dashboards easier like reusable components and global settings. And even to create your own component! Take the step beyond CDE and leverage the full power of CDF! No knowledge or experience with CDF? No worries! It will for sure help you to understand the concept of CDF better.&lt;/p&gt;
+
+&lt;p&gt;Julien also demo-ed a lot, styling a set of components in an instant just by implementing a standard layout, and reusing that in several graphs extending that standard layout!&lt;/p&gt;
+
+&lt;p&gt;Here: &lt;a href=&quot;https://github.com/blijblijblij/blog.blijblijblij.com/blob/master/pdf/20160131_CDF_beyond_CDE.pdf&quot;&gt;Juliens talk&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Tools Dashboards are Awesome! Julien Hofstede This presentation showed some techniques to make development of the dashboards easier like reusable components and global settings. And even to create your own component! Take the step beyond CDE and leverage the full power of CDF! No knowledge or experience with CDF? No worries! It will for sure help you to understand the concept of CDF better.</summary></entry><entry><title type="html">First pentaho nl meetup!</title><link href="https://blijblijblij.com/2016/01/30/first-meetup.html" rel="alternate" type="text/html" title="First pentaho nl meetup!" /><published>2016-01-30T00:00:00+01:00</published><updated>2016-01-30T00:00:00+01:00</updated><id>https://blijblijblij.com/2016/01/30/first-meetup</id><content type="html" xml:base="https://blijblijblij.com/2016/01/30/first-meetup.html">&lt;p&gt;Busy times, so with a slight delay a recap of our very first &lt;a href=&quot;http://www.meetup.com/Pentaho-NL-Meetup/&quot;&gt;pentaho NL meetup&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;ReelMetrics supplied a nice venue for this first meetup, took care off much appreciated beers and pizza’s. After these refreshments we had some nice talks covering a wide range of functionalities within the Pentaho ecosphere.&lt;/p&gt;
+
+&lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;From a yearly gathering somewhere in Europe, why not do a dutch equivalent every couple of months?! As open-source is thriving, community initiatives become even more important, and more than enough people doing Pentaho stuff in The Netherlands, so we gave it a try!&lt;/p&gt;
+
+&lt;p&gt;Some general “goals” to our meetup:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;to have FUN!&lt;/li&gt;
+  &lt;li&gt;to learn!&lt;/li&gt;
+  &lt;li&gt;to share!&lt;/li&gt;
+  &lt;li&gt;for noobs, super-dupper-master-hackers and everything in between!&lt;/li&gt;
+  &lt;li&gt;every couple of months-ish&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;, if a traveling pentaho rockstars comes along, we should do a adhoc meetup
+and seize that opportunity!&lt;/p&gt;
+
+&lt;h1 id=&quot;pentaho-and-docker-docker-docker&quot;&gt;Pentaho and Docker Docker Docker!&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Rogier Wessel&lt;/em&gt; Ok, I must admit, I am a big fan of both Pentaho and Docker. During this talk I explained
+first the basic building blocks that make up docker. Then talked about glueing
+services together into a docker composition. Finally once you start growing that
+infrastructure other problems arise, orchestration of docker instances running
+on multiple hosts gets complicated, and running a couple compositions doesn’t cut
+it anymore.&lt;/p&gt;
+
+&lt;p&gt;I gathered a lot of direction on orchestration based on the sound analyses by &lt;a href=&quot;https://twitter.com/adrianmouat&quot;&gt;Adrian Mouat’s&lt;/a&gt; article on O’reilly radar &lt;a href=&quot;http://radar.oreilly.com/2015/10/swarm-v-fleet-v-kubernetes-v-mesos.html&quot;&gt;Swarm v. Fleet v. Kubernetes v. Mesos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Based on that article I continued my quest in orchestration and investigated &lt;a href=&quot;http://mesos.apache.org/&quot;&gt;Apache Mesos&lt;/a&gt;
+extensively. The second half of my talk was demo time. When you do Docker with Pentaho software on Apache mesos, what are the components that make up the infrastructure, how is everything interconnected, and why does this complicated infrastructure make sense once your infrastructure grows beyond a certain size.&lt;/p&gt;
+
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/1qcNw-m7f7XHjGA6KfEjd3mqR03gsqM2N6kNDCTgP5pA/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;700&quot; height=&quot;422&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;All code about creating and running a Mesos cluster is on &lt;a href=&quot;https://github.com/blijblijblij/docker-mesos&quot;&gt;my github page&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/blijblijblij/docker-mesos/blob/develop/create/create-virtualbox-cluster.sh&quot;&gt;building a local virtualbox cluster&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/blijblijblij/docker-mesos/blob/develop/create/create-generic-ssh-cluster.sh&quot;&gt;building a cluster via ssh&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/blijblijblij/docker-mesos/blob/develop/create/create-aws-cluster.sh&quot;&gt;or directly via the aws api&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/blijblijblij/docker-mesos/tree/develop/run&quot;&gt;and running that cluster&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;ctools-dashboards-are-awesome&quot;&gt;CTools Dashboards are Awesome!&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Julien Hofstede&lt;/em&gt; This presentation showed some techniques to make development of the dashboards easier like reusable components and global settings. And even to create your own component! Take the step beyond CDE and leverage the full power of CDF! No knowledge or experience with CDF? No worries! It will for sure help you to understand the concept of CDF better.&lt;/p&gt;
+
+&lt;p&gt;Julien also demo-ed a lot, styling a set of components in an instant just by implementing a standard layout, and reusing that in several graphs extending that standard layout!&lt;/p&gt;
+
+&lt;h1 id=&quot;the-community-contributed-jdbc-metadata-step-for-pentaho-data-integration&quot;&gt;The Community Contributed JDBC Metadata Step for Pentaho Data integration&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Roland Bouman&lt;/em&gt; &lt;a href=&quot;https://github.com/rpbouman/pentaho-pdi-plugin-jdbc-metadata&quot;&gt;The Community Contributed JDBC Metadata Step for Pentaho Data integration&lt;/a&gt; enables you to use database metadata to drive transformations. You can use it to track database schema changes, to generate DDL, and even to implement datawarehouse automation. His presentation demonstrated the features of the plugin and illustrated how you can use it in your kettle transformations.&lt;/p&gt;
+
+&lt;p&gt;Roland never seems to stop coming up with new functionalities giving new insights, his code is all up on &lt;a href=&quot;https://github.com/rpbouman&quot;&gt;github&lt;/a&gt;. He could do with some extra eyes on the code, or some extra code to further extent his current work. So feel free to join and &lt;a href=&quot;https://twitter.com/rolandbouman&quot;&gt;give him a nudge&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h1 id=&quot;whats-up-next&quot;&gt;What’s up next?!&lt;/h1&gt;
+&lt;p&gt;Well, a lot of people turned up, some even took a hotel because of their long travels, big up for that!&lt;/p&gt;
+
+&lt;p&gt;Next to ReelMetrics some other sponsors came forward, for a location, pitch in for some beers :-). Also several people already offered to give a talk about some subject. &lt;a href=&quot;https://twitter.com/dennisintgroen&quot;&gt;Dennis&lt;/a&gt; wouldn’t mind diving into CDE widgets, and offering another view to reusable components along the lines of Juliens talk. &lt;a href=&quot;https://twitter.com/edwin_weber&quot;&gt;Edwin&lt;/a&gt; had something up his sleeve. Even [Dan Keeley]https://twitter.com/codek1 offered to come over and give a talk, we would love to accept his offer, and learn from his extensive experience.&lt;/p&gt;
+
+&lt;p&gt;So, enough momentum, looking forward to our next meetup!!!&lt;/p&gt;</content><author><name></name></author><summary type="html">Busy times, so with a slight delay a recap of our very first pentaho NL meetup.</summary></entry></feed>

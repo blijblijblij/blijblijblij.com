@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link rel="stylesheet" href="/assets/css/main.css">
+
+        <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Slack update from pdi | blijblijblij.com</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Slack update from pdi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data-transform your slack channels In my humble opinion Slack is a fantastic tool for keeping development teams aligned and informed. It has (irc supported) chat, voice calls, proper code snippet sharing but it really shines in its ability to integrate all that is important to a team." />
+<meta property="og:description" content="Data-transform your slack channels In my humble opinion Slack is a fantastic tool for keeping development teams aligned and informed. It has (irc supported) chat, voice calls, proper code snippet sharing but it really shines in its ability to integrate all that is important to a team." />
+<link rel="canonical" href="https://blijblijblij.com/2016/11/19/slack-update-from-pdi.html" />
+<meta property="og:url" content="https://blijblijblij.com/2016/11/19/slack-update-from-pdi.html" />
+<meta property="og:site_name" content="blijblijblij.com" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-11-19T00:00:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Slack update from pdi" />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Slack update from pdi","dateModified":"2016-11-19T00:00:00+01:00","datePublished":"2016-11-19T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://blijblijblij.com/2016/11/19/slack-update-from-pdi.html"},"description":"Data-transform your slack channels In my humble opinion Slack is a fantastic tool for keeping development teams aligned and informed. It has (irc supported) chat, voice calls, proper code snippet sharing but it really shines in its ability to integrate all that is important to a team.","url":"https://blijblijblij.com/2016/11/19/slack-update-from-pdi.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    </head>
+
+    <body style="background-color: rgb(255, 255, 255)">
+        <script async src="/assets/js/theme.min.js"></script>
+        <header>
+            <a href="/">
+                <div class="home"></div>
+            </a>
+        </header>
+
+        <main>
+            <article>
+                <h1 class="post-headline">Slack update from pdi</h1>
+<p class="meta"><small>November 19, 2016</small></p>
+
+<h1 id="data-transform-your-slack-channels">Data-transform your slack channels</h1>
+<p>In my humble opinion <a href="https://slack.com/">Slack</a> is a fantastic tool for keeping development teams aligned and informed. It has (irc supported) chat, <a href="https://get.slack.help/hc/en-us/articles/216771908-Start-a-voice-call-in-Slack">voice calls</a>, proper code snippet sharing but it really shines in its ability to <a href="https://api.slack.com/custom-integrations">integrate all that is important to a team</a>.</p>
+
+<p>For example we integrate:</p>
+
+<ul>
+  <li>updates on github, Pull requests, comments, …</li>
+  <li>updates on tickets, new, open, closed tickets</li>
+  <li>updates from ci, builds, tests, the occasional <code class="language-plaintext highlighter-rouge">#FAIL</code></li>
+  <li>updates from deploys instantiated from ci onto the mesos cluster</li>
+  <li>updates on failing services and network components from nagios</li>
+  <li>bash scripts synchronising in the background or via cron</li>
+</ul>
+
+<h2 id="one-thing-was-missing">One thing was missing</h2>
+
+<p>Updates from pesky long running etl-jobs, while being away from the vpn-ed carte status page. And a convenient way of updating fellow <code class="language-plaintext highlighter-rouge">are-we-there-yet-are-we-there-yet-are-we-there-yet-are-we-there-yet-</code> colleagues ;-).</p>
+
+<h2 id="enter-the-slack-incoming-webhook">Enter the slack incoming webhook</h2>
+<p>Slacks <a href="https://api.slack.com/incoming-webhooks">incoming-webhook</a> is simple, easy to understand and can be extended to support a lot of feedback:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-X</span> POST <span class="se">\</span>
+<span class="nt">--data-urlencode</span> <span class="s1">'payload={"text":"This is a line of text.\nAnd this is another one."}'</span> <span class="se">\</span>
+https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+</code></pre></div></div>
+
+<p>Pdi can do this nicely, and posting it to a slack endpoint seems a no brainer. So for something to be usefull it has to:</p>
+
+<ul>
+  <li>update on starting a job</li>
+  <li>update on sub jobs / transformations</li>
+  <li>escalate on <code class="language-plaintext highlighter-rouge">#FAIL</code>-ed data transformations</li>
+</ul>
+
+<h2 id="do-it">Do it</h2>
+
+<p>A reporting transformation that delivers the very same json, but with some additions:</p>
+
+<p><img src="/assets/images/2016-11-19_tr_report.png" alt="report to slack" title="report to slack" /></p>
+
+<p>Script the json with javascript:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">payload</span><span class="o">=</span> <span class="dl">'</span><span class="s1">{</span><span class="dl">'</span> <span class="o">+</span>
+	<span class="dl">'</span><span class="s1">"channel": "</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">channel</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">",</span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">"username": "</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">username</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">",</span><span class="dl">'</span> <span class="o">+</span>
+	<span class="dl">'</span><span class="s1">"text": "</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">env</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">",</span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">"attachments": [</span><span class="dl">'</span> <span class="o">+</span>
+        <span class="dl">'</span><span class="s1">{</span><span class="dl">'</span> <span class="o">+</span>
+            <span class="dl">'</span><span class="s1">"title": "</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">title</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">",</span><span class="dl">'</span> <span class="o">+</span>
+            <span class="dl">'</span><span class="s1">"text": "</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">text</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">",</span><span class="dl">'</span> <span class="o">+</span>
+			<span class="dl">'</span><span class="s1">"fallback": "</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">text</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">",</span><span class="dl">'</span> <span class="o">+</span>
+            <span class="dl">'</span><span class="s1">"color": "</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">color</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">"</span><span class="dl">'</span> <span class="o">+</span>
+        <span class="dl">'</span><span class="s1">}</span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">]</span><span class="dl">'</span> <span class="o">+</span>
+<span class="dl">'</span><span class="s1">};</span><span class="dl">'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Incorperate the slack reporting into a bigger picture:</p>
+
+<p><img src="/assets/images/2016-11-19_jb_main.png" alt="main job" title="main job" /></p>
+
+<p>Et voila, some slack updates:</p>
+
+<p><img src="/assets/images/2016-11-19_slack_updated.png" alt="on slack" title="on slack" /></p>
+
+<h2 id="thin-foil-hat">Thin foil hat</h2>
+<p>This thing is updating from internal sources onto semi-public services, save to say to not stick any comprising data in those shiny new status updates…</p>
+
+<h2 id="source-kjb--ktr">Source kjb / ktr</h2>
+<p><a href="https://github.com/blijblijblij/pdi-slack-reporting/archive/version-Release-1.zip">link</a></p>
+
+
+<!-- Comments only for posts -->
+
+    
+
+
+            </article>
+        </main>
+
+        <footer>
+            <div class="links">
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a class="theme" onclick="theme()">Dark/Light</a>
+            </div>
+            <p class="copy">
+                <small>Copyrights by
+                    blijblijblij.com
+                </small>
+            </p>
+        </footer>
+        <!-- Google Analytics Tracking code -->
+<script src="https://cdn.jsdelivr.net/npm/ga-lite@1/dist/ga-lite.min.js" async></script>
+<script>
+var galite = galite || {};
+galite.UA = '';
+</script>
+    </body>
+
+</html>
