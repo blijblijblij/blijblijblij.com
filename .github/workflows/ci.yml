@@ -11,7 +11,7 @@ jobs:
         image: postgres:11.1
         env:
           POSTGRES_USER: postgres
-          POSTGRES_DB: hofakker_test
+          POSTGRES_DB: blijblijblij_test
           POSTGRES_PASSWORD: ""
         ports: ["5432:5432"]
         options: >-
@@ -33,7 +33,7 @@ jobs:
 
       - name: Install gem files
         run: |
-          gem install bundler -v '2.2.5'
+          gem install bundler -v '2.2.11'
           bundle install
 
       - name: Run ruby code linter (Rubocop)
@@ -42,32 +42,32 @@ jobs:
       - name: Run vulnerability scanner (Brakeman)
         run: bin/brakeman -q -w2
 
-      # - name: Install dependencies
-      #   run: |
-      #     # fix: Unable to fetch some archives
-      #     sudo apt-get update
-      #     sudo apt-get -yqq install libpq-dev chromium-chromedriver
-      #     yarn install
+      - name: Install dependencies
+        run: |
+          # fix: Unable to fetch some archives
+          sudo apt-get update
+          sudo apt-get -yqq install libpq-dev chromium-chromedriver
+          yarn install
 
-      # - name: Setup test database
-      #   env:
-      #     RAILS_ENV: test
-      #     DATABASE_URL: postgres://postgres@localhost:5432/hofakker_test
-      #   run: |
-      #     bin/rails db:create
-      #     bin/rails db:migrate
+      - name: Setup test database
+        env:
+          RAILS_ENV: test
+          DATABASE_URL: postgres://postgres@localhost:5432/blijblijblij_test
+        run: |
+          bin/rails db:create
+          bin/rails db:migrate
 
       # - name: Run testsuite (Rspec)
       #   env:
       #     RAILS_ENV: test
-      #     DATABASE_URL: postgres://postgres@localhost:5432/hofakker_test
+      #     DATABASE_URL: postgres://postgres@localhost:5432/blijblijblij_test
       #   run: bin/rspec
 
       - name: Deploy to staging environment
         if: github.ref == 'refs/heads/develop' && job.status == 'success'
         env:
           HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
-          HEROKU_APP_NAME: "hofakker-staging"
+          HEROKU_APP_NAME: "blijblijblij-staging"
         # Deploy develop to staging app, this will autodeploy master so we have push to origin/develop:master
         run: git push --force https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/develop:master
 
@@ -75,5 +75,5 @@ jobs:
         if: github.ref == 'refs/heads/master' && job.status == 'success'
         env:
           HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
-          HEROKU_APP_NAME: "hofakker" 
+          HEROKU_APP_NAME: "blijblijblij" 
         run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
