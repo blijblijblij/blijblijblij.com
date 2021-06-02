@@ -4,10 +4,16 @@ updates:
   directory: "/"
   schedule:
     interval: daily
-    time: "04:00"
+    time: "02:00"
   open-pull-requests-limit: 10
   target-branch: develop
   reviewers:
   - blijblijblij
   labels:
-  - dependencies
+  - dependencies  
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "02:00"
+  open-pull-requests-limit: 10
